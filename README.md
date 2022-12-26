@@ -1,5 +1,5 @@
 # Rest-Api-Golang
-This is a rest applicatio of golang. Logging api and locally created database is used.
+This is a rest applicatio of creating, updating, deleting list of Books. Logging api and locally created database as long as Golang language is used.
 
 
 
