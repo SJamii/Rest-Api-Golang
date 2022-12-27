@@ -26,5 +26,5 @@ func main() {
 	dbHandler := db.Init(dbUrl)
 
 	books.RegisterRoutes(router, dbHandler)
-	router.Run("localhost:" + port)
+	router.Run(port)
 }
