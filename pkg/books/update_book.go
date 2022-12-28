@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/SJamii/book-rest-application/pkg/common/models"
+	"github.com/SJamii/book-rest-application/pkg/common/response"
 	"github.com/gin-gonic/gin"
 	log "github.com/sirupsen/logrus"
 )
@@ -33,10 +34,15 @@ func (h handler) UpdateBook(ctx *gin.Context) {
 	}
 
 	book.Title = body.Title
-	book.Author = body.Author
 	book.Description = body.Description
 
 	h.DB.Save(&book)
 
-	ctx.JSON(http.StatusOK, &book)
+	responseData := response.Response{
+		Status:  http.StatusOK,
+		Data:    book,
+		Message: "Updating Successful",
+	}
+
+	ctx.JSON(http.StatusOK, responseData)
 }

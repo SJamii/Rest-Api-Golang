@@ -1,10 +1,10 @@
 package main
 
 import (
-	log "github.com/sirupsen/logrus"
-
 	"github.com/SJamii/book-rest-application/pkg/books"
 	"github.com/SJamii/book-rest-application/pkg/common/db"
+	log "github.com/sirupsen/logrus"
+
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
 )
